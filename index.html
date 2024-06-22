@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Website e-commerce</title> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+  <style>
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style> 
+ </head> 
+ <body> 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#">Amy Cafe</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+   <div class="collapse navbar-collapse" id="navbarNav"> 
+    <ul class="navbar-nav ml-auto"> 
+     <li class="nav-item"> <a class="nav-link" href="#">Keranjang <span id="cart-count" class="badge badge-pill badge-primary">0</span></a> </li> 
+    </ul> 
+   </div> 
+  </nav> 
+  <div class="container mt-5"> 
+   <div class="row"> 
+    <div class="col-md-4"> 
+     <div class="card"> 
+      <img src="https://iili.io/ddaqMDN.jpg/300" class="card-img-top" alt="Product Image"> 
+      <div class="card-body"> 
+       <h5 class="card-title">Ayam Geprek</h5> 
+       <p class="card-text">Ayam geprek adalah hidangan khas Indonesia yang terdiri dari ayam goreng tepung yang diulek atau dihancurkan bersama sambal.</p> <button class="btn btn-primary" onclick="beliSekarang()">Beli</button> <button class="btn btn-success" onclick="tambahKeKeranjang()">Tambah ke Keranjang</button> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-md-4"> 
+     <div class="card"> 
+      <img src="https://iili.io/ddcun3B.jpg/300" class="card-img-top" alt="Product Image"> 
+      <div class="card-body"> 
+       <h5 class="card-title">Strawberry Tea</h5> 
+       <p class="card-text">Strawberry tea adalah minuman yang terbuat dari campuran teh dan stroberi segar atau perisa stroberi. Minuman ini menyajikan perpaduan antara rasa manis dan asam dari stroberi dengan aroma dan rasa khas teh.</p> <button class="btn btn-primary" onclick="beliSekarang()">Beli</button> <button class="btn btn-success" onclick="tambahKeKeranjang()">Tambah ke Keranjang</button> 
+      </div> 
+     </div> 
+    </div> <!-- Tambahkan produk lainnya dengan cara yang sama --> 
+   </div> 
+  </div> 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script> 
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+  <script>
+        let cartCount = 0;
+
+        function beliSekarang() {
+            alert('Produk telah dibeli!');
+        }
+
+        function tambahKeKeranjang() {
+            cartCount++;
+            document.getElementById('cart-count').innerText = cartCount;
+        }
+    </script> 
+ </body>
+</html>
